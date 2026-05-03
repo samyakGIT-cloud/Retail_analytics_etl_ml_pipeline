@@ -13,7 +13,7 @@ The system is designed with a **production-style mindset**, integrating data pro
 ## Architecture Diagram
 
 <p align="center">
-  <img src="architecture_diagram.jpeg" width="900"/>
+  <img src="architecture_diagram.png" width="900"/>
 </p>
 
 ## Pipeline Flow
