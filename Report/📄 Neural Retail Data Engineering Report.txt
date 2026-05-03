@@ -1,0 +1,130 @@
+📄 Neural Retail Data Engineering & ML Project Report
+📌 Project Title
+
+Retail Analytics Dashboard with ETL Pipeline, SQL Analysis, and Machine Learning Forecasting
+
+📌 Objective
+
+The objective of this project is to build a complete end-to-end data engineering and analytics system for retail sales data.
+The system processes raw data, stores it in a database, performs analysis, and applies machine learning models for business insights and forecasting.
+
+📌 Step 1: Data Collection
+Dataset used: Retail transaction dataset (CSV format)
+Data includes:
+Invoice ID
+Product (StockCode, Description)
+Quantity
+Invoice Date
+Price
+Customer ID
+Country
+📌 Step 2: Data Cleaning & Preprocessing
+
+Performed using Python (Pandas):
+
+Removed missing values (Customer ID, Date)
+Fixed date format issues (InvoiceDate)
+Created new column:
+TotalPrice = Quantity × Price
+Handled inconsistent formats in dataset
+Ensured clean structured data for further processing
+📌 Step 3: ETL Pipeline Development
+
+Created a Python script:
+
+etl_pipeline.py
+ETL Steps:
+Extract → Load CSV data
+Transform → Clean and process data
+Load → Insert into PostgreSQL database
+Database:
+PostgreSQL (pgAdmin)
+Table: retail_data
+📌 Step 4: Database Integration (PostgreSQL)
+Connected Python to PostgreSQL using psycopg2
+Created database:
+retail_db
+Inserted cleaned data into database
+Verified data using SQL queries
+📌 Step 5: SQL Analysis (Business Insights)
+
+Performed multiple SQL queries:
+
+Key Insights:
+Total Revenue
+Total Customers
+Total Orders
+Top 10 Products by Quantity
+Top 10 Customers by Revenue
+Revenue by Country
+Sales Trend over time
+📌 Step 6: Streamlit Dashboard
+
+Created an interactive dashboard:
+
+app.py
+Features:
+KPI Metrics:
+Total Revenue
+Total Customers
+Total Orders
+Visualizations:
+Top Products
+Top Customers
+Revenue by Country
+Sales Trend
+Filter:
+Country selection
+📌 Step 7: Churn Prediction Model
+
+Created a machine learning model:
+
+churn_model.py
+Approach:
+Used RFM (Recency, Frequency, Monetary) features
+Defined churn:
+Customers inactive for more than 90 days
+Model:
+Logistic Regression
+Output:
+Accuracy score
+Classification report
+📌 Step 8: Sales Forecasting Model
+
+Created forecasting model:
+
+forecast_model.py
+Approach:
+Aggregated daily sales
+Used Linear Regression for prediction
+Output:
+Predicted next 30 days sales
+Generated:
+CSV file → sales_forecast_30_days.csv
+Graph → sales_forecast_chart.png
+📌 Step 9: Forecast Integration in Dashboard
+Added forecasting section in Streamlit dashboard
+Displayed:
+Predicted sales table
+Forecast graph (Actual vs Predicted)
+📌 Technologies Used
+Python (Pandas, NumPy, Scikit-learn)
+PostgreSQL (pgAdmin)
+SQL
+Streamlit (Dashboard)
+Matplotlib (Visualization)
+📌 Key Learnings
+End-to-end ETL pipeline development
+Database integration with Python
+SQL-based business analysis
+Dashboard creation using Streamlit
+Machine learning model building
+Time-series forecasting basics
+📌 Future Enhancements
+Implement Prophet / LSTM forecasting model
+Add advanced ML models (XGBoost, LightGBM)
+Improve dashboard UI
+Deploy project online
+📌 Conclusion
+
+This project demonstrates a complete data engineering + analytics + machine learning pipeline, starting from raw data to business insights and predictive modeling.
